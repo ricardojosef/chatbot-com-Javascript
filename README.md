@@ -2,7 +2,7 @@
 
 Este projeto é um **chatbot básico** construído com HTML, CSS e JavaScript. Ele responde a perguntas pré-definidas de forma simples, permitindo que o usuário interaja com o bot digitando suas perguntas e recebendo respostas automáticas.
 
-Para usa-lo, clique no link: 
+Para usa-lo, acesse o link: https://ricardojosef.github.io/chatbot-com-Javascript/
 
 ## Como funciona
 
