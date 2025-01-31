@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Básico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="explanation">
+        <p><strong>Como funciona:</strong> Este é um chatbot simples. Você pode perguntar coisas como "olá", "que horas são", "qual é seu nome?" e outras perguntas. O bot vai responder com base nas respostas predefinidas.</p>
+    </div>
+    
+    <div class="suggestion" onclick="suggestQuestion('Qual a identidade do Batman?')">
+        Sugestão: pergunte a <strong>identidade do Batman</strong>
+    </div>
+    
+    <div class="chat-box" id="chatBox">
+        <p class="bot-msg">Olá! Como posso te ajudar?</p>
+    </div>
+    
+    <input type="text" id="userInput" placeholder="Digite sua mensagem..." onkeydown="if(event.key === 'Enter'){sendMessage();}">
+    <button onclick="sendMessage()">Enviar</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
