@@ -35,7 +35,9 @@ const responses = {
     "qual a data de hoje": new Date().toLocaleDateString(),
     "como você funciona?": "Eu sou um chatbot simples, criado para responder perguntas pré-definidas.",
     "quem é o presidente do Brasil?": "O presidente do Brasil é Luiz Inácio Lula da Silva.",
-    "Qual a identidade do Batman?": "Eu não deveria revelar isso...mas tudo indica que o Cavaleiro das Trevas é Bruce Wayne."
+    "Qual a identidade do Batman?": "Eu não deveria revelar isso...mas tudo indica que o Cavaleiro das Trevas é Bruce Wayne.",
+    "tudo bem?": "Tudo ótimo, e com você?",
+    "também": "Fico feliz em saber!"
 };
 
 function sendMessage() {
@@ -67,6 +69,11 @@ function addMessage(message, sender) {
 function suggestQuestion(question) {
     userInput.value = question;  // Define o valor do campo de entrada com a pergunta sugerida
     sendMessage();  // Envia a pergunta automaticamente
+    let sugestão = document.querySelectorAll(".suggestion"); 
+    sugestão.forEach(elemento => {
+        elemento.style.display = "none"; // Oculta cada um dos elementos
+    });
+
 }
 function handleKeyPress(event) {
     if (event.key === 'Enter') {
@@ -89,6 +96,12 @@ function getBotResponse(userText) {
     }
     if (normalizedText.includes("identidade do batman")) {
         return responses["Qual a identidade do Batman?"];
+    }
+    if (normalizedText.includes("tudo bem")||("tudo bom?")) {
+        return responses["tudo bem?"];
+    }
+    if (normalizedText.includes("tambem")||("também")) {
+        return responses["também"];
     }
 
     return "Desculpe, não entendi isso. Tente outra pergunta.";
