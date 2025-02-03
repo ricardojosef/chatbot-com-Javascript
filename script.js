@@ -34,6 +34,7 @@ const responses = {
     "qual a data de hoje?": new Date().toLocaleDateString(),
     "qual a data de hoje": new Date().toLocaleDateString(),
     "como você funciona?": "Eu sou um chatbot simples, criado para responder perguntas pré-definidas.",
+    "como funciona?": "Eu sou um chatbot simples, criado para responder perguntas pré-definidas.",
     "quem é o presidente do Brasil?": "O presidente do Brasil é Luiz Inácio Lula da Silva.",
     "Qual a identidade do Batman?": "Eu não deveria revelar isso...mas tudo indica que o Cavaleiro das Trevas é Bruce Wayne.",
     "tudo bem?": "Tudo ótimo, e com você?",
